@@ -1,22 +1,30 @@
 import React from "react";
+import useConversation from "../../store/useConversation";
 
-const Conversation = () => {
+const Conversation = ({ conversations, lastIdx }) => {
+  const { selectedConversation, setSelectedConversation } = useConversation();
+  const isSeleted = selectedConversation?._id === conversations._id;
   return (
     <>
-      <div className="flex gap-2 items-center hover:bg-sky-500 rounded p-2 py-1 cursor-pointer">
+      <div
+        className={`flex gap-2 items-center hover:bg-zinc-800 rounded p-2 py-1 cursor-pointer
+          ${isSeleted ? "bg-zinc-800" : ""}
+          `}
+        onClick={() => setSelectedConversation(conversations)}
+      >
         <div className="avatar online">
           <div className="w-12 rounded-full">
-            <img src="" alt="user avatar" />
+            <img src={conversations.profilePic} alt="user avatar" />
           </div>
         </div>
         <div className="flex flex-col flex-1">
           <div className="flex gap-3 justify-center">
-            <p className="font-bold text-zinc-300">John Doe</p>
-            <span className="text-xl">🎃</span>
+            <p className="font-bold text-zinc-300">{conversations.fullName}</p>
+            {/* <span className="text-xl">🎃</span> */}
           </div>
         </div>
       </div>
-      <div className="divider my-0 py-0 h-1"></div>
+      {!lastIdx && <div className="divider my-0 py-0 h-1"></div>}
     </>
   );
 };
