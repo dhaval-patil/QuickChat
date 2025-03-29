@@ -3,7 +3,7 @@ import toast from "react-hot-toast";
 
 const useGetConversations = () => {
   const [loading, setLoading] = useState(false);
-  const [conversations, setConversations] = useState([]);
+  const [conversation, setConversation] = useState([]);
 
   useEffect(() => {
     const getConversations = async () => {
@@ -14,7 +14,7 @@ const useGetConversations = () => {
         if (data.error) {
           throw new Error(data.error);
         }
-        setConversations(data);
+        setConversation(data);
       } catch (error) {
         toast.error(error.message);
       } finally {
@@ -25,6 +25,6 @@ const useGetConversations = () => {
     getConversations();
   }, []);
 
-  return { loading, conversations };
+  return { loading, conversation };
 };
 export default useGetConversations;

@@ -6,7 +6,7 @@ import useGetConversations from "../../hooks/useGetConversations";
 const SearchInput = () => {
   const [search, setSearch] = useState("");
   const { setSelectedConversation } = useConversation();
-  const { conversation } = useGetConversations();
+  const { conversations } = useGetConversations();
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -14,7 +14,7 @@ const SearchInput = () => {
     if (search.length < 3) {
       return toast.error("Search must be at least 3 character long");
     }
-    const conversation = conversation.find((c) =>
+    const conversation = conversations.find((c) =>
       c.fullName.toLowerCase().includes(search.toLowerCase())
     );
 
