@@ -20,8 +20,8 @@ A real-time chat application built with **React.js, Node.js, Express, MongoDB, S
 
 ## 📸 Demo
 
-> 🔗 [Live Demo](#)  
-> 📂 [Source Code](#)
+> 🔗 [Live Demo](https://quickchat-qv8k.onrender.com/)  
+> 📂 [Source Code](https://github.com/dhaval-patil)
 
 | Login Page | Chat Room |
 |------------|-----------|
@@ -101,15 +101,10 @@ Visit the app at: `http://localhost:5173`
 - ⏳ Notifications
 - ⏳ Typing indicators
 
-## 🤝 Contributing
-
-Contributions, issues, and feature requests are welcome!  
-Feel free to check the [issues page](https://github.com/yourusername/quick-chat/issues).
-
 ## 🙋‍♂️ Author
 
 **Dhaval Patil**  
-🔗 [LinkedIn](#) • [Instagram](#) • [Portfolio](#)
+🔗 [LinkedIn](https://www.linkedin.com/in/dhaval-patill/)
 
 ## ⭐️ Show Some Love
 
