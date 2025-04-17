@@ -25,7 +25,7 @@ A real-time chat application built with **React.js, Node.js, Express, MongoDB, S
 
 | Login Page | Chat Room |
 |------------|-----------|
-| ![Login](frontend/public/login.png) | ![Chat Room](screenshots/chat.png) |
+| ![Login](frontend/public/login.png) | ![Chat Room](frontend/public/home.png) |
 
 ## 📁 Project Structure
 
